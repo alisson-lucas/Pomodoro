@@ -6,10 +6,24 @@
 
 .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #333853;
+    color: #aaa6a3;
     width: 100vw;
     height: 100vh;
+}
+
+.title {
+    margin-bottom: 100px;
+}
+
+.options-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
 }
 
 .divider {
@@ -18,6 +32,11 @@
     align-items: center;
     justify-content: center;
     margin: 20px;
+    background-color: #3C4262;
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    box-shadow: 10px 5px 5px #0000;
 }
 
 .btns {
@@ -25,4 +44,40 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #aaa6a3;
+    margin: 5px;
+    font-size: 18px;
+    color: #3C4262;
+    cursor: pointer;
+}
+
+.time {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 60px;
+    background-color: #3C4262;
+    color: #aaa6a3;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 25px;
+    cursor: pointer;
+    text-decoration: none;
 }
