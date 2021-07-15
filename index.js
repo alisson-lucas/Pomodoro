@@ -10,6 +10,9 @@ document.getElementById('pause') ? document.getElementById('pause').innerHTML = 
 document.getElementById('sessions') ? document.getElementById('sessions').innerHTML = sessions : '';
 document.getElementById('minutes') ? document.getElementById('minutes').innerHTML = min : '';
 
+function loaded() {
+    localStorage.setItem('time', min);
+}
 
 function workPlus(){
     min < 60 ? min++ : '';
