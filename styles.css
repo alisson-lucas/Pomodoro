@@ -154,3 +154,7 @@
     margin-top: 30px;
     cursor: pointer;
 }
+
+.hidden {
+    display: none;
+}

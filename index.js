@@ -62,28 +62,37 @@ function sessionLess(){
 
 
 
-document.getElementById('time') ? document.getElementById('time').innerHTML = '<span>' + time + ':' + seg + '<span>' : '';
+document.getElementById('time') ? document.getElementById('time').innerHTML = seg === 0 ?  '<span>' + time + ':' + seg + '0 <span>' : '<span>' + time + ':' + seg + '<span>' : '';
+document.getElementById('pause') ? document.getElementById('pause').innerHTML = seg === 0 ?  '<span>' + pause + ':' + seg + '0 <span>' : '<span>' + pause + ':' + seg + '<span>' : '';
 
 
 function relogio(){			
-    if((min > 0) || (seg > 0)){				
+    if((time > 0) || (seg > 0)){				
         if(seg == 0){					
-            seg = 59;					
-            min = min - 1	
+            seg = 10;					
+            time = time - 1	
         }				
         else{					
             seg = seg - 1;				
         }				
-        if(min.toString().length == 1){					
-            min = "0" + min;				
+        if(time.toString().length == 1){					
+            time = "0" + time;				
         }				
         if(seg.toString().length == 1){					
             seg = "0" + seg;				
         }				
-        document.getElementById('time').innerHTML = min + ":" + seg;				
-        setTimeout('relogio()', 1000);			
+        document.getElementById('time').innerHTML =  time + ":" + seg;				
+        setTimeout('relogio()', 1000);	
+        console.log(time, seg);	
     }			
     // else{				
     //     document.getElementById('spanRelogio').innerHTML = "00:00";			
     // }		
+    if (time == 00 && seg == 00) {
+        element = document.querySelector('#timer'); 
+        element.classList.add('hidden');
+
+        elementPause = document.querySelector('#pause');
+        element.classList.remove('hidden')
+    }
 }	
