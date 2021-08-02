@@ -16,16 +16,27 @@
             <h1 class="header-tittle">Pomodoro</h1> 
             <a href="inicio.html" class="header-button">Início</a> 
         </div>
-        <div class="timer-container">
-            <div id="timer" class="timer">
+        <div id="timer" class="timer-container">
+            <div class="timer">
                 <h3 id="time" class="counter"></h3>
             </div>
-            <div id="pause" class="timer hidden">
+            <!-- <div id="pause-time" class="pause-timer hidden">
                 <h3 id="time" class="counter"></h3>
-            </div>
+            </div> -->
             <div class="buttons-container">
                 <h2>Trabalho</h2>
                 <button class="play-button" onclick=relogio()>
+                    <i class="fas fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+        <div id="pause-timer" class="timer-container hidden">
+            <div id="pause-time" class="pause-timer">
+                <h3 id="time" class="counter"></h3>
+            </div>
+            <div class="buttons-container">
+                <h2>Pausa</h2>
+                <button class="play-button" onclick=pauseCounter()>
                     <i class="fas fa-angle-right"></i>
                 </button>
             </div>

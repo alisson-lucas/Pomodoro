@@ -134,6 +134,18 @@
     background-color: #3C4262;
 }
 
+.pause-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    background-color: #3C4262;
+    font-size: 42px;
+    font-weight: bold;
+}
+
 .buttons-container {
     display: flex;
     flex-direction: column;
